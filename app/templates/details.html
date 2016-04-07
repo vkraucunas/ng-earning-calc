@@ -1,0 +1,23 @@
+<div ng-controller="DetailControl">
+    <h3>Enter details for Meal {{counter}}</h3>
+    <form name="mealEntry"
+          ng-submit="handleForm()">
+        <label for="sub">Base Meal Price: $</label>
+        <input type="number"
+               placeholder="0.00"
+               name="meal.sub"
+               ng-model="meal.sub">
+        <!-- <label for="tax">Tax Rate: %</label>
+        <input type="number"
+               placeholder="0.00"
+               name="meal.tax"
+               ng-model="meal.tax"> -->
+        <label for="tip">Tip Percentage: %</label>
+        <input type="number"
+               placeholder="0.00"
+               name="meal.tip"
+               ng-model="meal.tip">
+        <br>
+        <input type="submit">
+    </form>
+</div>

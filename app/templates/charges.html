@@ -1,0 +1,18 @@
+<h3>Overview for Meal {{counter}}</h3>
+
+<button style="display: inline-block;"
+        ng-click="retreat()">
+    Previous Meal
+</button>
+<button style="display: inline-block;"
+        ng-click="advance()">
+    Next Meal
+</button>
+<div ng-repeat="meal in meals track by $index">
+    <div ng-show="$index == present">
+        <h3>Subtotal: <em>{{meals[$index].sub | currency}}</em></h3>
+        <h3>Tip: <em>{{meals[$index].tip | currency}}</em></h3>
+        <br>
+        <h3>Total: <em>{{meals[$index].sub + meals[$index].tip | currency}}</em></h3>
+    </div>
+</div>
